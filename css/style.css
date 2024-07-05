@@ -4,16 +4,29 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-.alert-container {}
+.alert-container .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.site-wide-alert{
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 5px 15px;
+    background-color: #e4b32f;
+    border-color: #e4b32f;
+}
 
 .callout-container {
     height: 100vh;
 
-    background: url(../images/whiskey-background.jpg) no-repeat bottom right fixed;
+    background: url(../images/whiskey-background.jpg) rgba(0, 0, 0, 0.3) no-repeat bottom right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+
+    background-blend-mode: multiply;
 
     display: flex;
     align-items: center;
@@ -35,6 +48,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
 }
 
 /* Block Deviders */
@@ -55,6 +69,36 @@ body {
     width: 35px;
 }
 
+/* Navbar styling */
+
+.navalert-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 0;
+    padding-right: 0;
+    z-index: 1;
+}
+
+.navbar .navbar-toggler{
+    border: none;
+}
+
+.navbar .navbar-brand{
+    font-weight: bold;
+}
+
+.navbar .navbar-nav a{
+    font-weight: bold;
+}
+
+.navbar{
+    margin-bottom: 0;
+    border: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
 /* Callout Styling */
 
 
@@ -73,6 +117,10 @@ body {
     font-size: 60%;
     font-style: italic;
     color: #d0d0d0;
+}
+
+.callout {
+    z-index: 2;
 }
 
 /* Buttons */
